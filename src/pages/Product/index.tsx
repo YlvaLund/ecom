@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { ShoppingContext } from "../../context/shoppingContext";
 import { getProduct } from "../../client/online_store";
-import { Product as model } from "../../models/models";
+import { ProductModel } from "../../models/models";
 import "./product.scss";
+import Button from "../../components/Button";
 
 // Product
 
 export default function Product() {
-  const [productData, setProductData] = useState<model | null>();
+  const [productData, setProductData] = useState<ProductModel | null>();
+  const shop = useContext(ShoppingContext);
   const { id } = useParams();
 
   useEffect(() => {
@@ -42,6 +45,14 @@ export default function Product() {
           <span>{productData?.reviews?.length ?? 0}</span>
           <strong>Rating:</strong>
           <span>{productData?.rating}</span>
+          <Button
+            type="cta"
+            title="Add to Cart"
+            path=""
+            action={() => {
+              shop?.addProduct(productData);
+            }}
+          />
         </div>
         <div className="reviews__container">
           {productData?.reviews?.map((r) => {
@@ -55,7 +66,6 @@ export default function Product() {
           })}
         </div>
       </div>
-      {id}
     </div>
   );
 }

@@ -1,0 +1,24 @@
+div.cart__container {
+  position: relative;
+  padding: 12px;
+  max-width: 800px;
+  margin: 0px auto;
+  h1 {
+    margin: 24px 0px;
+  }
+  div.product__viewer {
+    padding: 4px;
+    display: grid;
+    grid-template-columns: auto 100px 60px;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+    &:nth-of-type(odd) {
+      background: #fff;
+    }
+    &.product__total {
+      font-weight: 600;
+      padding: 18px 4px;
+    }
+  }
+}

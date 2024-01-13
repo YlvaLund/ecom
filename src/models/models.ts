@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductModel {
   id: string;
   title: string;
   description: string;
@@ -15,3 +15,5 @@ interface Review {
   rating: number;
   description: string;
 }
+
+export interface CartModel extends Array<ProductModel> {}

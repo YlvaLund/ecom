@@ -15,7 +15,7 @@ export default function Card({ product }: any) {
         <span className="product__price">{product?.price}</span>
         <p>{productDescription}</p>
       </div>
-      <Button type="card" title="Details" path={`/products/${product.id}`} />
+      <Button type="card" title="Details" path={`/products/${product.id}`} action={console.log} />
     </div>
   );
 }

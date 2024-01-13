@@ -12,17 +12,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main__title {
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0px 0px 10vh 0vw;
-  height: 500px;
+  margin-bottom: 24px;
+  padding: 12px;
+  height: 400px;
+  place-content: center;
   max-height: 50svh;
   text-align: center;
   background: url('../public/tamanna-rumee_background.jpg');
   background-position: top center;
   background-size: cover;
   align-items: center;
+  justify-items: center;
 }
-.main__title h1 {
-  font-size: 4rem;
+
+h1 {
+  font-size: 3rem;
+}
+.main__title h1, .main__title span {
+  color: #fff;
+}
+
+
+input[type="text"], input[type="email"] {
+  padding: 4px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 120px;
+  border: 1px solid #ccc;
 }

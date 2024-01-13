@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ShoppingContext } from "../../context/shoppingContext";
 import { NavLink } from "react-router-dom";
 import "./navigation.scss";
 
 export default function Navigation() {
+  const { cart } = useContext(ShoppingContext);
+
   return (
     <nav>
       <NavLink to="/">
@@ -15,7 +18,7 @@ export default function Navigation() {
       </NavLink>
       <NavLink to="/cart">
         <i className="fa-solid fa-cart-shopping"></i>
-        <span>1</span>
+        <span>Cart</span>(<span>{cart?.length}</span>)
       </NavLink>
     </nav>
   );

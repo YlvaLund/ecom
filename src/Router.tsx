@@ -7,6 +7,7 @@ import Error from "./pages/error";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import { ProductModel, CartModel } from "./models/models";
 
 const router = createBrowserRouter([
   {
@@ -35,14 +36,29 @@ const router = createBrowserRouter([
 ]);
 
 function Router() {
-  const [shoppingCart, setShoppingCart] = useState<ShoppingContextType>({
-    username: "filiptammergard",
-    cart: [],
-    addProduct: () => {},
-    removeProduct: (id: String) => {},
-  });
+  const [cart, setCart] = useState<CartModel>([]);
+  const [username, setUsername] = useState<string>("Ylva");
+
+  const addProduct = (p: ProductModel) => {
+    setCart((prevCart) => [...prevCart, p]);
+  };
+
+  const removeProduct = (p: ProductModel) => {
+    setCart((prevCart) => prevCart.filter((product) => product.id !== p.id));
+  };
+
   return (
-    <ShoppingContext.Provider value={shoppingCart}>
+    <ShoppingContext.Provider
+      value={{
+        username: username,
+        addProduct: addProduct,
+        removeProduct: removeProduct,
+        clearCart: () => {
+          setCart([]);
+        },
+        cart: cart,
+      }}
+    >
       <RouterProvider router={router} />
     </ShoppingContext.Provider>
   );

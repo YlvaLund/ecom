@@ -12,6 +12,16 @@ button.btn {
     width: 100%;
   }
   &:hover {
-    background: #848484;
+    background: #73a9c8 !important;
+    color: #fff;
+  }
+  &.secondary {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+  }
+  &.cta {
+    background: #326f9a;
+    color: #fff;
   }
 }

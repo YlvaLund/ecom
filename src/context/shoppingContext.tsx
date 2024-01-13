@@ -1,15 +1,18 @@
 import { createContext } from "react";
-import { Product } from "../models/models";
-
-interface Products {
-  [index: number]: Product;
-}
+import { CartModel } from "../models/models";
 
 export interface ShoppingContextType {
   username: string;
-  cart: Products;
   addProduct: Function;
   removeProduct: Function;
+  clearCart: Function;
+  cart: CartModel;
 }
 
-export const ShoppingContext = createContext<ShoppingContextType | null>(null);
+export const ShoppingContext = createContext<ShoppingContextType>({
+  username: "",
+  addProduct: () => {},
+  removeProduct: () => {},
+  clearCart: () => {},
+  cart: [],
+});

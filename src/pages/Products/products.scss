@@ -4,4 +4,5 @@ div.products__container {
   flex-wrap: wrap;
   gap: 24px;
   padding: 24px;
+  place-content: space-evenly;
 }
