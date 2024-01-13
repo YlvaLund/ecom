@@ -1,0 +1,14 @@
+div.product__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 12px;
+  @media screen and (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  img {
+    max-height: 80vh;
+    place-self: center;
+  }
+}

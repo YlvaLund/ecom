@@ -1,0 +1,14 @@
+nav {
+  background: rgb(64, 64, 64);
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 8px;
+  a,
+  i {
+    color: #fff;
+    text-decoration: none;
+  }
+}

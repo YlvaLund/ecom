@@ -1,0 +1,17 @@
+button.btn {
+  background: #69a9d6;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  outline: none;
+  padding: 8px 4px;
+  &.card {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  &:hover {
+    background: #848484;
+  }
+}

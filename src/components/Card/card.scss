@@ -1,0 +1,32 @@
+div.product__card {
+  position: relative;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 420px;
+  overflow: hidden;
+  img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card__content {
+    h3 {
+      font-size: 1.25rem;
+      text-align: center;
+      letter-spacing: normal;
+      margin-bottom: 6px;
+    }
+    position: relative;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    .product__price {
+      width: 100%;
+      color: rgb(58, 110, 110);
+      text-align: right;
+    }
+  }
+}
