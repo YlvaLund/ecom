@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ShoppingContext, ShoppingContextType } from "./context/shoppingContext";
 import Index from "./pages/index";
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 
 function Router() {
   const [cart, setCart] = useState<CartModel>([]);
-  const [username, setUsername] = useState<string>("Ylva");
+  // const [username, setUsername] = useState<string>("Ylva");
 
   const addProduct = (p: ProductModel) => {
     setCart((prevCart) => [...prevCart, p]);
@@ -55,7 +55,7 @@ function Router() {
   return (
     <ShoppingContext.Provider
       value={{
-        username: username,
+        username: "Ylva",
         addProduct: addProduct,
         removeProduct: removeProduct,
         clearCart: () => {

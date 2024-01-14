@@ -55,6 +55,8 @@ export default function Products() {
             // We return everything if no search exist
             return <Card product={p} />;
           }
+
+          return;
         })}
       </div>
     </>
