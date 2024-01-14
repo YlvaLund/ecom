@@ -6,9 +6,34 @@ nav {
   flex-direction: row;
   gap: 12px;
   padding: 8px;
+  justify-content: space-around;
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
   a,
   i {
     color: #fff;
     text-decoration: none;
   }
+  a {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+  }
+}
+
+.cart__count {
+  position: relative;
+  top: -8px;
+  background: #ff33336c;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  font-family: monospace;
 }

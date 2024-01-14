@@ -3,6 +3,7 @@ export interface ProductModel {
   title: string;
   description: string;
   price: number;
+  discountedPrice: number;
   imageUrl: string;
   rating: number;
   tags: string[];

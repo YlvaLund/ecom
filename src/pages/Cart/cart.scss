@@ -20,5 +20,13 @@ div.cart__container {
       font-weight: 600;
       padding: 18px 4px;
     }
+    a,
+    a:visited {
+      text-decoration: none;
+      color: #444;
+      &:hover {
+        color: #69a9d6;
+      }
+    }
   }
 }

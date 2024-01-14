@@ -7,6 +7,7 @@ import Error from "./pages/error";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import Payment from "./pages/Payment";
 import { ProductModel, CartModel } from "./models/models";
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         path: "/cart",
         element: <Cart />,
       },
+      {
+        path: "/payment",
+        element: <Payment />,
+      },
     ],
   },
 ]);
@@ -54,7 +59,7 @@ function Router() {
         addProduct: addProduct,
         removeProduct: removeProduct,
         clearCart: () => {
-          setCart([]);
+          setCart((prevCart) => []);
         },
         cart: cart,
       }}

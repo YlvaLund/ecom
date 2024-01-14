@@ -8,6 +8,7 @@ import "./products.scss";
 
 export default function Products() {
   const [allProducts, setAllProducts] = useState<ProductModel[]>([]);
+  const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -25,10 +26,37 @@ export default function Products() {
   }, [setAllProducts]);
 
   return (
-    <div className="products__container">
-      {allProducts.map((p) => {
-        return <Card product={p} />;
-      })}
-    </div>
+    <>
+      <label className="product__filter">
+        <span>Search</span>
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+        />
+      </label>
+      <div className="products__container">
+        {allProducts.map((p) => {
+          if (search?.length > 0) {
+            if (p.title.toLowerCase().includes(search.toLowerCase())) {
+              // only return if the title is included
+              return <Card product={p} />;
+            }
+            if (p.tags?.length > 0) {
+              for (let t of p.tags) {
+                if (t.toLocaleLowerCase().includes(search.toLocaleLowerCase())) {
+                  return <Card product={p} />;
+                }
+              }
+            }
+          } else {
+            // We return everything if no search exist
+            return <Card product={p} />;
+          }
+        })}
+      </div>
+    </>
   );
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import "./card.scss";
 import Button from "../Button";
 
@@ -15,7 +14,7 @@ export default function Card({ product }: any) {
         <span className="product__price">{product?.price}</span>
         <p>{productDescription}</p>
       </div>
-      <Button type="card" title="Details" path={`/products/${product.id}`} action={console.log} />
+      <Button type="card" title="View product" path={`/products/${product.id}`} action={console.log} />
     </div>
   );
 }

@@ -8,9 +8,7 @@ function Index() {
   return (
     <MainLayout>
       <Navigation />
-      <div>
-        <Outlet />
-      </div>
+      <Outlet />
       <Footer />
     </MainLayout>
   );

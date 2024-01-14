@@ -1,0 +1,15 @@
+div.payment__conatiner {
+  position: relative;
+  padding: 12px;
+  max-width: 800px;
+  margin: 0px auto;
+  h1 {
+    margin: 24px 0px;
+  }
+  .back__component {
+    display: grid;
+    padding: 24px;
+    background: #fff;
+    place-content: center;
+  }
+}

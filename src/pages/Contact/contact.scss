@@ -14,4 +14,17 @@ div.contact__container {
       display: grid;
     }
   }
+
+  button {
+    background: #69a9d6;
+    padding: 4px 8px;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background: #73a9c8;
+      color: #fff;
+    }
+  }
 }
