@@ -11,7 +11,7 @@ export default function Payment() {
 
   useEffect(() => {
     shop.clearCart();
-  }, []);
+  }, [shop]);
 
   // Handle the clear cart
 

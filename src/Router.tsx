@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ShoppingContext, ShoppingContextType } from "./context/shoppingContext";
+import { ShoppingContext } from "./context/shoppingContext";
 import Index from "./pages/index";
 import Ecom from "./pages/Ecom";
 import Error from "./pages/error";

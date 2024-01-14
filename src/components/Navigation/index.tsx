@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { ShoppingContext } from "../../context/shoppingContext";
 import { NavLink } from "react-router-dom";
 import "./navigation.scss";

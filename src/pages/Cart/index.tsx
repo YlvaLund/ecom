@@ -1,14 +1,13 @@
 import { useContext } from "react";
 import { ShoppingContext } from "../../context/shoppingContext";
 import { ProductModel } from "../../models/models";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import "./cart.scss";
 // Cart
 
 export default function Cart() {
   const { cart, removeProduct } = useContext(ShoppingContext);
-  const navigate = useNavigate();
 
   let totalAmount = 0;
   if (cart?.length > 0) {
